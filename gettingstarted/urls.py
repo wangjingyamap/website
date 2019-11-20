@@ -6,6 +6,8 @@ admin.autodiscover()
 
 import hello.views
 import coffee.views
+from django.template import Context, loader
+
 # To add a new path, first import the app:
 # import blog
 #
