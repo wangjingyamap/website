@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+{% include 'header.html' %}
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <title>Style circles with a data-driven property</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        /* body { margin:100; padding:100; }
+        #map { position:absolute; top:0; bottom:0; width:100%; } */
+        .marker {
+  background-image: url('mapbox-icon.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+    </style>
+</head>
+<body>
+        <div class="jumbotron"  style="background:transparent !important">
+        <h1 style="size: 12em" align="center" class="display-1">Specitaly Coffee in San Francisco</h1>
+        </div>
+            <div class="container-fuild">
+                    <div class="row">
+                      <div class="col-sm">
+                            <div id='map' style="height:800px; "></div>
+                            
+                      </div>
+                      <div class="col-sm" >
+                            <!-- <p   style="size: 12em">
+                                    There are so many coffee shops in San Francisco, some are good some are bad.
+                                  </p> -->
+                                  <blockquote class="blockquote">
+                                  <p class="lead"  style="size: 12em">
+                                        "I wake up some mornings and sit and have my coffee and look out at my beautiful garden, and I go, 'Remember how good this is. Because you can lose it.'"
+                                        
+                                    </p>  <footer class="blockquote-footer">Jim Carrey</footer> 
+                                     
+                                  </blockquote>   
+
+
+                           
+                      </div>
+                      
+                    </div>
+                  </div>
+
+
+<script>
+
+mapboxgl.accessToken = 'pk.eyJ1Ijoid2FuZ2ppbmd5YW1hcCIsImEiOiJjazM2dTJlcG0wNTBvM2dsOW5zMnR2bnhwIn0._w5z2UpXnuYUIl7Hc7lVqw';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/wangjingyamap/ck36wq44o0ah01do0xv5qurx0',
+    zoom: 11.8,
+    center: [-122.441225, 37.763620]
+});
+// add markers to map
+geojson.features.forEach(function(marker) {
+
+  // create a HTML element for each feature
+  var el = document.createElement('div');
+  el.className = 'marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+  .setLngLat(marker.geometry.coordinates)
+  .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+    .setHTML('<h3>' + marker.properties + '</h3><p>' + marker.properties.description + '</p>'))
+  .addTo(map);
+});
+</script>
+
+</body>
+</html>
