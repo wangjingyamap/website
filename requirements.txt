@@ -1,3 +1,7 @@
 django
 gunicorn
 django-heroku
+django-imagekit
+dj_static
+pillow
+psycopg2
