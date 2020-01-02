@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% include 'header.html' %}  {% include "nav.html" %}
+<style>
+
+img {
+    height: 200;
+  }
+  
+  .cover {
+    width: 200;
+    object-fit: cover;
+  }
+</style>
+<html>
+        <div class="container-fluid">
+
+    <div class="row">
+                
+{% for d in object_list %}
+<div class="col-xs-4">
+    <img src="/{{d.profile_pic}}" class="object-fit_contain" object-fit="cover" background-size="contain" alt="" width="400" height="400"></div>
+{% endfor %}
+</div>
+</div>
+</html>

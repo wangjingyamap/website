@@ -17,6 +17,11 @@ import django_heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+STATIC_URL = '/static/'
+STATIC_ROOT =  BASE_DIR #'static'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -40,7 +45,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "hello",
-    "coffee"
+    "coffee",
+    "hobbies"
 ]
 
 MIDDLEWARE = [
@@ -71,6 +77,9 @@ TEMPLATES = [
     }
 ]
 
+
+
+
 WSGI_APPLICATION = "gettingstarted.wsgi.application"
 
 
@@ -78,10 +87,16 @@ WSGI_APPLICATION = "gettingstarted.wsgi.application"
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE" : "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3")
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'daisc1ka6j6sim',
+        'USER': 'eylycjfrnpttes',
+        'PASSWORD': 'b76a71dda0e539b05df285d935c8883876f89e294e67ee0bd38cffc200ede21d',
+        'HOST': 'ec2-174-129-203-86.compute-1.amazonaws.com',
+        'PORT': 5432
     }
+
+ 
 }
 
 # Password validation
@@ -116,5 +131,8 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = "/static/"
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 django_heroku.settings(locals())
+
+
