@@ -1,4 +1,4 @@
 from django.contrib import admin
-from hobbies.models import Illstrations
+from hobbies.models import illustrations
 # Register your models here.
-admin.site.register(Illstrations)
+admin.site.register(illustrations)

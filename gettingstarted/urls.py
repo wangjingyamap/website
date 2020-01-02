@@ -26,4 +26,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('coffee/',coffee.views.Coffee.as_view(),name='coffee'),
     path('illustrations/',hobbies.views.Illustrations.as_view(),name='illustrations'),
+    path('illustrations/<int:pk>/',hobbies.views.IllustrationsDetails.as_view(),name='illustrations_detail'),
+
 ]+static(gettingstarted.settings.STATIC_URL,document_root=gettingstarted.settings.STATIC_ROOT) 

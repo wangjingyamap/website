@@ -3,7 +3,7 @@ from imagekit.models import ProcessedImageField
 
 
 # Create your models here.
-class Illstrations(models.Model):
+class illustrations(models.Model):
     profile_pic = ProcessedImageField(
         upload_to='static/images/profiles',
         format='JPEG',

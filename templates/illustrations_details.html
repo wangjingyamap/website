@@ -1,0 +1,49 @@
+{% include 'header.html' %} {% include "nav.html" %}
+
+<style>
+    .container-detail {
+        background: #FAFAFA;
+        padding-top: 50px;
+        position: absolute;
+        
+        width: 100%;
+        height: 100%
+    }
+
+    .card-detail {
+        width: 750px;
+        height: 800px;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin: 0 auto;
+    }
+
+
+    .content {
+        width: 700;
+        height: 700;
+        object-fit: scale-down;
+        margin: 0 auto;
+    }
+    
+</style>
+
+
+<html>
+<section class="container-detail">
+    <div class="card-detail">
+        <div class="content">
+                <div class="card-body" align="center">
+                        <h5 >
+                        {{illustrations.title}}</h5>
+                      </div>
+            <img class="content"  src="/{{illustrations.profile_pic}}">
+                    <h5 >
+                    {{illustrations.comments}}</h5>
+    </div>
+    </div>
+
+</section>
+
+</html>

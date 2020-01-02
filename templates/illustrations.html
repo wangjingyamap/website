@@ -2,8 +2,10 @@
 {% include 'header.html' %}  {% include "nav.html" %}
 <style>
 
+
 img {
     height: 200;
+    margin: 5px 5px;
   }
   
   .cover {
@@ -18,7 +20,12 @@ img {
                 
 {% for d in object_list %}
 <div class="col-xs-4">
-    <img src="/{{d.profile_pic}}" class="object-fit_contain" object-fit="cover" background-size="contain" alt="" width="400" height="400"></div>
+    <a href="{% url 'illustrations_detail' d.pk %}">
+            
+    <img src="/{{d.profile_pic}}" class="object-fit_contain" object-fit="cover" background-size="contain" alt="" width="400" height="400">
+
+</a>
+</div>
 {% endfor %}
 </div>
 </div>
