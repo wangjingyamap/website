@@ -58,6 +58,8 @@ class Post(models.Model):
     photos=models.ManyToManyField(Photographies,related_name='photos')
 
     class Meta:
+        managed = True
+        db_table = 'post'
         ordering = ['-created_on']
 
     def __str__(self):
