@@ -1,6 +1,6 @@
 # This is my personal website
 
-wangjingskate.com
+http://wangjingskate.com
 
   
 ```
