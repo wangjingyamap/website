@@ -19,21 +19,22 @@ img {
         object-fit: cover;
     }
     .container{
-        margin: 5px 40px;
+        /* margin: 5px 40px; */
+        background: #FAFAFA;
     }
     .card{
-        margin: 5px 10px;
+        margin: 5px 5px;
     }
 </style>
 <body>
     <div class="container" >
-        <div class="card-columns">
+        <div class="card-columns-2">
 <div class="row">
 {% for d in object_list %}
 <div class="col-xs-4">
-<div class="card" style="width: 20rem;">
+<div class="card" style="width: 13rem;">
         {% for a in d.photos.all %}
-        <img  class="card-img-top" src="/{{a.profile_pic}}" align="center" alt="" width="300" height="300">
+        <img  class="card-img-top" src="/{{a.profile_pic}}" align="center" alt="" width="200" height="200">
         {% endfor %}
         
         <div class="card-body"><h5>{{d.title}}</h5>
