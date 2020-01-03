@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% include 'header.html' %}  {% include "nav.html" %}
-<style>
+<html><style>
 
 
 img {
@@ -19,26 +19,28 @@ img {
         background: #FAFAFA;
         padding-top: 50px;
         position: absolute;
+        align-self: center;
         width: 100%;
         height: 100%
     }
   
 </style>
-<html>
-    
-        <div class="container-layout"  >
+    <body>
+        
+    <div class="d-flex p-2">
+<div class="align-self-center" >
 
     <div class="row">
-                
+
 {% for d in object_list %}
 <div class="col-xs-4">
     <a href="{% url 'illustrations_detail' d.pk %}">
             
-    <img src="/{{d.profile_pic}}" class="object-fit_contain" object-fit="cover" background-size="contain" alt="" width="400" height="400">
+    <img src="/{{d.profile_pic}}" class="object-fit_contain" object-fit="cover" background-size="contain" alt="" width="300" height="300">
 
 </a>
 </div>
 {% endfor %}
 </div>
-</div>
+</div></div></body>
 </html>
