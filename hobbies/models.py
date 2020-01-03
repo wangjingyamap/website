@@ -13,15 +13,16 @@ class Illustrations(models.Model):
     id = models.CharField(primary_key=True,max_length=200)
     title = models.CharField(max_length=200,null=True)
     Comments = models.CharField(max_length=1000,null=True)
-    priority=models.IntegerField(default=0)
+    priority=models.IntegerField(default=0, blank=True, null=True)
 
     class Meta:
             managed = True
             db_table = 'illustrations'
-            ordering = ['-priority']
+            ordering = ['priority']
 
     def __str__(self):
         return self.title
+    
 STATUS = (
     (0,"Draft"),
     (1,"Publish")
@@ -45,7 +46,7 @@ class Photographies(models.Model):
             db_table = 'photographies'
 
     def __str__(self):
-        return self.title
+        return self.id
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
