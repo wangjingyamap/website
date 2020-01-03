@@ -7,7 +7,11 @@
         margin: 5px 5px;
         object-fit: cover;
     }
-
+    /* .cover {
+    width: 200;
+    /* object-fit: cover; */
+    /* object-fit: scale-down;
+  } */
 
     */ .container-layout {
         background: #FAFAFA;
@@ -27,7 +31,7 @@
             <div class="row">
 
                 {% for d in object_list %}
-                <div class="col">
+                <div class="col-xs-4">
                     <a href="{% url 'illustrations_detail' d.pk %}">
             
     <img src="/{{d.profile_pic}}" class="object-fit_contain" object-fit="cover" background-size="contain" alt="" width="300" height="300">
