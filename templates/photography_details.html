@@ -1,0 +1,36 @@
+{% include 'header.html' %} {% include "nav.html" %}
+
+<style>
+    .container-detail {
+        padding-top: 50px;
+        position: absolute;
+        width: 100%;
+        height: 100%
+    }
+
+
+    .content {
+        width: 700;
+        /* height: 700; */
+        object-fit: scale-down;
+        margin: 0 auto;
+        padding-bottom: 100px;
+    }
+    
+</style>
+
+
+<html>
+<section class="container-detail">
+    <div class="content">
+   <h3>{{post.title}}</h3>
+        {% for a in post.photos.all %}
+        <img class="content"  src="/{{a.profile_pic}}" width="600" height="600">
+        {% endfor %}
+   <p>{{post.content}}</p>
+    
+
+</div>
+</section>
+
+</html>
