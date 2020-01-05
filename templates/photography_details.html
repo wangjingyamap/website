@@ -8,6 +8,19 @@
         height: 100%
     }
 
+    img {
+        object-fit: scale-down;
+        float: left;
+        width: 70%;
+        height: 70%;
+       
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
 
     .content {
         width: 700;
@@ -16,21 +29,24 @@
         margin: 0 auto;
         padding-bottom: 100px;
     }
-    
 </style>
 
 
 <html>
 <section class="container-detail">
     <div class="content">
-   <h3>{{post.title}}</h3>
-        {% for a in post.photos.all %}
-        <img class="content"  src="/{{a.profile_pic}}" width="600" height="600">
-        {% endfor %}
-   <p>{{post.content}}</p>
-    
 
-</div>
+        <h2 style="size: 12em" align="center" class="display-6">{{post.title}}</h2>
+        <hr>
+        <p>
+                 {% for a in post.photos.all %}
+                <img src="/{{a.profile_pic}}" align="left"> {% endfor %}
+               
+                {{post.content}} </p>
+            </div>
+
+
+        </div>
 </section>
 
 </html>
