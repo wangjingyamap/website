@@ -85,7 +85,7 @@
                             <div class="col-xs-4">
                                 <div class="card-columns">
                                     <div class="card" style="width: 20rem;">
-                                        {% for a in d.photos.all %}
+                                        {% for a in d.photos.all|slice:":1" %}
                                         <img class="card-img-top" src="/{{a.profile_pic}}" align="center" alt="" width="200" height="200" class="img-thumbnail">                                        {% endfor %}
 
                                         <div class="card-body">

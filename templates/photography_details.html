@@ -32,8 +32,7 @@
 
         <h2 style="size: 12em" align="center" class="display-6">{{post.title}}</h2>
         <hr>
-        
-                 {% for a in post.photos.all %}
+                 {% for a in post.photos.all  %}
                 <img src="/{{a.profile_pic}}" > 
                 {% endfor %}
                 <p style="padding : 10px">
