@@ -22,4 +22,7 @@ class Photography(ListView):
     template_name='photography.html'
     
 
-
+class PhotographyDetails(DetailView):
+    model=Post
+    template_name='photography_details.html'
+    
