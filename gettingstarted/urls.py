@@ -29,5 +29,6 @@ urlpatterns = [
     path('illustrations/<int:pk>/',hobbies.views.IllustrationsDetails.as_view(),name='illustrations_detail'),
     path('photography/',hobbies.views.Photography.as_view(),name='photography'),
     path('photography/<int:pk>/',hobbies.views.PhotographyDetails.as_view(),name='photography_detail'),
+    path('skate/',hobbies.views.Skate.as_view(),name='skate'),
 
 ]+static(gettingstarted.settings.STATIC_URL,document_root=gettingstarted.settings.STATIC_ROOT) 

@@ -1,0 +1,54 @@
+
+<!DOCTYPE html> {% include 'header.html' %} {% include "nav.html" %}
+
+<html>
+<style>
+    .container {
+  display: grid;
+}
+
+.left-half {
+  /* background: #ff9e2c; */
+  grid-column: 1;
+}
+.imag{
+    object-fit: scale-down;
+
+}
+.right-half {
+  /* background: #b6701e; */
+  grid-column: 2;
+}
+</style>
+
+        <body>
+        
+            <div class="container" style="padding: 50px">
+                    
+        <div class="left-half">
+        <img style="object-fit: scale-down;" src="/static/images/Website/skateboard.JPG" alt="" alignment="left" width="80%" height="80%">
+        </div>
+        <div class="right-half">
+                <h2 style="size: 12em" align="center" class="display-6">My Sk8 List</h2>
+                
+        <ul style="list-style-type:none;">
+          <li>&#10003; Kickturn</li>
+          <li>&#10003; Ollie</li>
+          <li>&#10003; Moving Ollie</li>
+          
+          <li>&#10079; Ollie off an edge</li>
+          <li>&#10079; Ollie over an edge</li>
+          <li>&#10079; Shuvit</li>
+          
+          <li>&#10003; Pumping</li>
+          <li>&#10079; Kickturn in mini ramp</li>
+          <li>&#10079; Rock to fakie in mini ramp</li>
+          <li>&#10079; Drop in</li>
+          <li>&#10079; Carving bowl</li>
+            <li>&#10079; Power slide</li>
+        </ul>  
+        </div>
+    </div>
+        </body>
+        </html>
+        

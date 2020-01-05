@@ -17,6 +17,9 @@ class IllustrationsDetails(DetailView):
     
 
 
+class Skate(TemplateView):
+    template_name='skate.html'
+
 class Photography(ListView):
     model=Post
     template_name='photography.html'
