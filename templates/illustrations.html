@@ -13,19 +13,27 @@
     /* object-fit: scale-down;
   } */
 
-    */ .container-layout {
-        background: #FAFAFA;
+     .container-layout {
         /* padding-top: 50px; */
         position: absolute;
         /* align-self: center; */
-        width: 100%;
-        height: 100%
+        width: 70%;
+        height: 100%;
     }
+    .content {
+        width: 10;
+        height: 700;
+        object-fit: scale-down;
+        margin: 0 auto;
+    }
+    
 </style>
 
 <body>
+    <div class="content">
 
-    <div class="d-flex p-2 container-layout ">
+    <!-- <div class="d-flex p-2 container-layout "> -->
+        
         <div class="align-self-center">
 
             <div class="row">
@@ -34,14 +42,14 @@
                 <div class="col-xs-4">
                     <a href="{% url 'illustrations_detail' d.pk %}">
             
-    <img src="/{{d.profile_pic}}" class="object-fit_contain" object-fit="cover" background-size="contain" alt="" width="300" height="300">
+    <img src="/{{d.profile_pic}}" class="object-fit_contain" object-fit="cover" background-size="contain" alt="" width="300" height="300"  class="img-thumbnail">
 
 </a>
                 </div>
                 {% endfor %}
             </div>
         </div>
-    </div>
+    </div></div>
 </body>
 
 </html>
